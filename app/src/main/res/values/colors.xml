@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="BackgroundBeige">#FFF2EAD8</color>
+    <color name="HeaderBrown">#FF9E7B55</color>
+    <color name="CardBrown">#FFB8966A</color>
+    <color name="PriceBadge">#FF7A5C3A</color>
+    <color name="MoreButtonBrown">#FF5C3E22</color>
+    <color name="TextDark">#FF2B1A0E</color>
+    <color name="ScrollBarColor">#FF7A5133</color>
+    <color name="SearchBarColor">#FFCFB99A</color>
+    <color name="TextWhite">#FFFFFFFF</color>
+</resources>
