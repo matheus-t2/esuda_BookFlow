@@ -13,8 +13,8 @@
         android:theme="@style/Theme.BookFlow">
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
+            android:exported="false"
+            android:label="@string/title_activity_main"
             android:theme="@style/Theme.BookFlow">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

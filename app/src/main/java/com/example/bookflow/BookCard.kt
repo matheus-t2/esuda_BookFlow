@@ -2,16 +2,8 @@ package com.example.bookflow
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,17 +17,23 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+// ── Card de livro clicável ────────────────────────────────────────
 @Composable
-fun BookCard(book: Book) {
+fun BookCard(
+    book: Book,
+    onClick: () -> Unit = {}   // ← callback de clique
+) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(16.dp))
             .background(CardBrown)
+            .clickable { onClick() }   // ← torna o card clicável
             .padding(12.dp)
     ) {
         Row(modifier = Modifier.fillMaxWidth()) {
-            // Capa do livro
+
+            // ── Capa do livro ────────────────────────────────────
             Box(
                 modifier         = Modifier
                     .size(width = 90.dp, height = 130.dp)
@@ -52,7 +50,7 @@ fun BookCard(book: Book) {
 
             Spacer(modifier = Modifier.width(12.dp))
 
-            // Informações do livro
+            // ── Informações textuais ─────────────────────────────
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text       = book.title,
@@ -84,7 +82,7 @@ fun BookCard(book: Book) {
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                // Botões de preço e "mais"
+                // ── Badge de preço e botão "mais" ────────────────
                 Row(
                     modifier              = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.End,
