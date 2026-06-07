@@ -70,7 +70,7 @@ fun TelaDetalhesLivro(
 
 // ── AppBar com botão de voltar ────────────────────────────────────
 @Composable
-private fun TopAppBarComVoltar(onVoltar: () -> Unit) {
+fun TopAppBarComVoltar(onVoltar: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
